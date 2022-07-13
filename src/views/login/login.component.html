@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <div class="card">
+        <i class="fa-solid fa-user fa-5x" style="color: #70056f"></i>
+
+        <div class="loginInput">
+            <div class="input">
+                <i class="fa-solid fa-envelope fa-xl" style="color: #7a7a7a;"></i>
+                <input type="text" placeholder="Email" name="email" [(ngModel)]="login.username" />
+            </div>
+            <div class="input">
+                <i class="fa-solid fa-key fa-xl" style="color: #7a7a7a;"></i>
+                <input type="password" placeholder="Senha" [(ngModel)]="login.password" />
+            </div>
+        </div>
+
+        <button (click)="loginConfirm()">Confirmar</button>
+        
+        <div class="linha"><hr  width = 100px noshade>ou<hr  width = 100px noshade></div>
+        <button (click)="goCreat()">Criar conta</button>
+        <!-- <a href="newuser">Não possue login?</a> -->
+    </div>
+</body>
+
+</html>

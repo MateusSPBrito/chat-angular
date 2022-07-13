@@ -1,0 +1,35 @@
+<html>
+
+<body>
+    <div class="card">
+        <div class="chat">
+            <div *ngFor="let message of messages" >
+                <div *ngIf="message.name==nome" class="messages1">
+                    <div class="messageBox2">
+                        <p class="pName">{{message.name}}:</p>
+                        <p class="pMessage">{{message.message}}</p>
+                    </div>
+                </div>
+                <div *ngIf="message.name!=nome" class="messages1">
+                    <div class="messageBox1">
+                        <p class="pName">{{message.name}}:</p>
+                        <p class="pMessage">{{message.message}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <table>
+                <tr *ngFor="let message of messages">
+                    <td>{{message.message}}</td>
+                </tr>
+            </table> -->
+        </div>
+        <div class="input">
+            <input type="text" [(ngModel)]="message.message" placeholder="     Message">
+            <button type="button" (click)="send()">
+                <i class="fa-solid fa-angles-right " style="color: rgb(223, 8, 145);"></i>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
